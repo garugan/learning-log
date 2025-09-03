@@ -174,7 +174,7 @@ if (age >= 20) {
   console.log("私は20歳未満ですが、10歳以上です");
 }
 
- else {
+  else {
   console.log("私は10歳未満です");
 }
 
