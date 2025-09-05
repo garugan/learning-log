@@ -108,3 +108,153 @@ console.log(animals.length);
 for (let i = 0; i < animals.length; i++) {
   console.log(animals[i]);
 }
+
+
+
+// オブジェクト
+// 定数characterを定義し、指定されたオブジェクトを代入してください
+const character = {name: "にんじゃわんこ", age: 14};
+
+// characterの値を出力してください
+console.log(character);
+
+
+
+// オブジェクトの値の取得・更新
+const character = {name: "にんじゃわんこ", age: 14};
+
+// characterのnameの値を出力してください
+console.log(character.name);
+
+// characterのageの値を「20」に更新してください
+character.age = 20;
+
+// characterをコンソールに出力してください
+console.log(character);
+
+
+
+// オブジェクトを要素に持つ配列（1）
+const characters = [
+  {name: "にんじゃわんこ", age: 14},
+  {name: "ひつじ仙人", age: 1000}
+];
+
+// charactersの1つ目の要素をコンソールに出力してください
+console.log(characters[0]);
+
+// charactersの2つ目の要素の「name」に対応する値をコンソールに出力してください
+console.log(characters[1].name);
+
+
+
+// オブジェクトを要素に持つ配列（2）
+const characters = [
+  {name: "にんじゃわんこ", age: 14},
+  {name: "ひつじ仙人", age: 100},
+  {name: "ベイビーわんこ", age: 5},
+];
+
+// for文を完成させてください
+for (let i = 0; i < characters.length; i++) {
+  console.log("--------------------");
+  
+  // 定数characterを定義してください
+  const character = characters[i];
+  
+  // 「名前は〇〇です」を出力してください
+  console.log(`名前は${character.name}です`);
+  
+  // 「〇〇歳です」を出力してください
+  console.log(`${character.age}歳です`);
+  
+}
+
+
+
+// undefinedとは
+const characters = [
+  {name: "にんじゃわんこ", age: 14},
+  {name: "ひつじ仙人", age: 100},
+  {name: "ベイビーわんこ", age: 5},
+  // 要素を追加してください
+  {name: "とりずきん"}
+];
+
+for (let i = 0; i < characters.length; i++) {
+  console.log("--------------------");
+  
+  const character = characters[i];
+  
+  console.log(`名前は${character.name}です`);
+  console.log(`${character.age}歳です`);
+}
+
+
+
+// undefinedの対応
+const characters = [
+  {name: "にんじゃわんこ", age: 14},
+  {name: "ひつじ仙人", age: 100},
+  {name: "ベイビーわんこ", age: 5},
+  {name: "とりずきん"}
+];
+
+for (let i = 0; i < characters.length; i++) {
+  console.log("--------------------");
+  
+  const character = characters[i];
+  
+  console.log(`名前は${character.name}です`);
+  
+  // if文を追加してください
+  if (character.age === undefined) {
+    console.log("年齢は秘密です");
+  } else {
+    console.log(`${character.age}歳です`);
+  }
+  
+  
+}
+
+
+
+// 総合演習(1)
+const cafe = {
+  name: "Progateカフェ",
+  businessHours: {
+    // businessHoursの値に指定されたオブジェクトを代入してください
+    opening: "10:00(AM)",
+    closing: "8:00(PM)"
+  }
+};
+
+// 「店名:〇〇」を出力してください
+console.log (`店名:${cafe.name}`);
+
+// 「営業時間:〇〇から△△」を出力してください
+console.log (`営業時間:${cafe.businessHours.opening}から${cafe.businessHours.closing}`);
+
+
+
+// 総合演習(2)
+const cafe = {
+  name: "Progateカフェ",
+  businessHours: { 
+    opening: "10:00(AM)",
+    closing: "8:00(PM)"
+  },
+  // menusプロパティに配列を代入してください
+  menus: ["コーヒー","紅茶", "チョコレートケーキ"]
+  
+};
+
+console.log(`店名: ${cafe.name}`);
+console.log(`営業時間:${cafe.businessHours.opening}から${cafe.businessHours.closing}`);
+console.log(`----------------------------`);
+console.log("おすすめメニューはこちら");
+
+// for文を用いて配列menusの中身を表示させてください
+for (let i = 0; i < cafe.menus.length; i++) {
+  console.log (cafe.menus[i]);
+}
